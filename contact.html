@@ -6,7 +6,7 @@
     <title>Contact — NexGen Digital</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -14,15 +14,15 @@
     <header class="site-header" id="header">
       <div class="container header-inner">
         <a href="index.html" class="brand">
-          <div class="brand-mark"><svg viewBox="0 0 16 16" fill="none"><path d="M6 8L7.5 9.5L10.5 6.5" stroke="#00E5A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="brand-mark"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 8.5L7 11L11.5 5.5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           NexGen Digital
         </a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Main">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="portfolio.html">Portfolio</a>
           <a href="about.html">About</a>
-          <a href="contact.html" class="cta active">Get Started</a>
+          <a href="contact.html" class="cta active">Get started</a>
         </nav>
       </div>
     </header>
@@ -30,35 +30,34 @@
     <main>
       <div class="page-hero">
         <div class="container">
-          <div class="eyebrow reveal">Get in touch</div>
-          <h1 class="reveal">Start your project today.</h1>
-          <p class="reveal">Fill in the form below and we'll get back to you within 24 hours with a tailored proposal.</p>
+          <h1>Start your project today.</h1>
+          <p>Fill in the form below and we'll get back to you within 24 hours with a tailored proposal.</p>
         </div>
       </div>
 
-      <section class="section" style="padding-top:0">
+      <section class="section" style="padding-top:64px">
         <div class="container">
           <div class="contact-grid">
-            <form id="contactForm" class="contact-form reveal">
+            <form id="contactForm" class="contact-form">
               <div>
-                <label class="field-label">Your name</label>
-                <input name="name" type="text" placeholder="John Smith" required />
+                <label class="field-label" for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="John Smith" autocomplete="name" required />
               </div>
               <div>
-                <label class="field-label">Email address</label>
-                <input name="email" type="email" placeholder="john@company.co.za" required />
+                <label class="field-label" for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="john@company.co.za" autocomplete="email" required />
               </div>
               <div>
-                <label class="field-label">Your message</label>
-                <textarea name="message" rows="6" placeholder="Tell us about your project, budget, and timeline..." required></textarea>
+                <label class="field-label" for="message">Your message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, budget and timeline" required></textarea>
               </div>
               <div class="form-actions">
-                <button type="submit" class="btn primary">Send message &rarr;</button>
+                <button type="submit" class="btn primary">Send message</button>
                 <a class="btn ghost" href="mailto:info@nexgendigital.co.za">Email directly</a>
               </div>
             </form>
 
-            <div class="contact-info reveal" style="transition-delay:0.15s">
+            <div class="contact-info">
               <div class="ci-card">
                 <div class="ci-label">Email</div>
                 <a href="mailto:info@nexgendigital.co.za">info@nexgendigital.co.za</a>
@@ -73,7 +72,7 @@
               </div>
               <div class="ci-card">
                 <div class="ci-label">Business hours</div>
-                <p>Monday – Friday<br>9:00 AM – 5:00 PM SAST</p>
+                <p>Monday to Friday<br>9:00 AM to 5:00 PM SAST</p>
               </div>
               <div class="ci-card">
                 <div class="ci-label">Response time</div>
@@ -89,16 +88,38 @@
       <div class="container">
         <div class="footer-inner">
           <div class="footer-brand">
-            <a href="index.html" class="brand" style="font-size:18px"><div class="brand-mark"><svg viewBox="0 0 16 16" fill="none"><path d="M6 8L7.5 9.5L10.5 6.5" stroke="#00E5A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>NexGen Digital</a>
-            <p>Building professional digital experiences for South African businesses since 2022.</p>
+            <a href="index.html" class="brand">
+              <span class="brand-mark"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 8.5L7 11L11.5 5.5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              NexGen Digital
+            </a>
+            <p>Professional websites for South African businesses.</p>
           </div>
-          <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-          <div class="footer-col"><h4>Services</h4><a href="services.html">Starter Package</a><a href="services.html">Business Package</a><a href="services.html">E-commerce</a><a href="services.html">Care Plan</a></div>
-          <div class="footer-col"><h4>Contact</h4><a href="mailto:info@nexgendigital.co.za">info@nexgendigital.co.za</a><a href="tel:+27211234567">+27 (21) 123-4567</a><a href="#">Cape Town, South Africa</a></div>
+          <div class="footer-col">
+            <h4>Pages</h4>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html">Starter</a>
+            <a href="services.html">Business</a>
+            <a href="services.html">E-commerce</a>
+            <a href="services.html">Care Plan</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:info@nexgendigital.co.za">info@nexgendigital.co.za</a>
+            <a href="tel:+27211234567">+27 (21) 123-4567</a>
+            <span class="footer-text">Cape Town, South Africa</span>
+            <span class="footer-text">Mon–Fri, 9AM–5PM SAST</span>
+          </div>
         </div>
         <div class="footer-bottom">
           <p>&copy; <span id="year"></span> NexGen Digital. All rights reserved.</p>
-          <a href="#">Privacy Policy</a>
+          <a href="#">Privacy policy</a>
         </div>
       </div>
     </footer>
